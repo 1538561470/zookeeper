@@ -5,7 +5,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class CommonApplicationTests {
-
+    //阿松大
     @Test
     void contextLoads() {
     }
