@@ -1,5 +1,9 @@
 package com.zookeeper.service;
 
+import com.zookeeper.domain.UserAddress;
+
+import java.util.List;
+
 /**
  * @Description:
  * @ClassName: OrderService
@@ -9,5 +13,5 @@ package com.zookeeper.service;
 public interface OrderService {
 
 
-    public void initOrder(String Id);
+     List<UserAddress> initOrder(String Id);
 }

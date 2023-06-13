@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+
+    <dubbo:application name="OrderPro"></dubbo:application>
+
+    <dubbo:registry  address="zookeeper://127.0.0.1:2181"/>
+    <!--需要远程服务的接口-->
+    <dubbo:reference interface="com.zookeeper.service.UserService" id="userService"></dubbo:reference>
+
+    <!--  注册中心监控 -->
+<!--    <dubbo:monitor address="127.0.0.1:7070"/>-->
+    <dubbo:monitor protocol="registry"/>
+</beans>
